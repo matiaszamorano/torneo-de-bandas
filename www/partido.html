@@ -84,5 +84,14 @@ and open the template in the editor.
         <script src="js/torneoBandas.js" type="text/javascript"></script>
         <script src="js/opcionesGanadorTorneo.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery.jPlayer/jquery.jplayer.min.js"></script>
+        <script type="text/javascript">
+            var path_audios = "http://www.comunidadfusa.com/reproductor/audio/";
+            var jPlayerSwfPath = "https://www.comunidadfusa.com/js/lib/jquery.jPlayer";
+//            $("#btVerPosiciones").live("click", function () {
+//                window.location = "<?php echo url_for('@torneo_de_bandas_posiciones') ?>";
+//            });
+            torneoBandas.init("1");
+        </script>
     </body>
 </html>

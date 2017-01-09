@@ -1,4 +1,4 @@
-var torneoBandas = (function() {
+var torneoBandas = (function () {
     var audios = [];
     var partido = null;
     var segundos = 15;
@@ -6,10 +6,36 @@ var torneoBandas = (function() {
     var recarga;
     var autoplay;
 
+    function getAudiosPartido(options) {
+        var url = baseURILayout + "/juegos/torneo-de-bandas/audios";
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: url,
+            cache: false,
+            beforeSend: options.beforeSend,
+            success: options.success
+        });
+    }
+
+    function guardarResultadoPartido(options) {
+        var url = baseURILayout + "/juegos/torneo-de-bandas/partido/resultado";
+
+        $.ajax({
+            type: "POST",
+            dataType: "html",
+            data: options.data,
+            url: url,
+            beforeSend: options.beforeSend,
+            success: options.success
+        });
+    }
+
     function obtenerAudios() {
-        comunidadfusa.service.torneo.getAudiosPartido({
-            beforeSend: comunidadfusa.util.mostrarCargando(),
-            success: function(data) {
+        getAudiosPartido({
+//            beforeSend: comunidadfusa.util.mostrarCargando(),
+            success: function (data) {
                 audios = data.audios;
                 partido = data.partido;
                 $('#player01').attr('data-id', data.audios[0].id);
@@ -18,21 +44,21 @@ var torneoBandas = (function() {
                 inicializarReproductores();
                 inicializarPasosDelJuego();
                 inicializarResultados();
-                comunidadfusa.util.ocultarCargando();
+//                comunidadfusa.util.ocultarCargando();
             }
         });
     }
 
     function inicializarPasosDelJuego() {
 
-        $("#partido-opciones").on("click", "#btJugar", function() {
+        $("#partido-opciones").on("click", "#btJugar", function () {
             jugar($(this));
             return false;
         });
     }
 
     function jugar($boton) {
-        comunidadfusa.util.mostrarCargando();
+//        comunidadfusa.util.mostrarCargando();
         timerDescendiente("player01");
         $boton.hide();
         $("#btVerPosiciones").hide();
@@ -48,7 +74,7 @@ var torneoBandas = (function() {
         var theSecsBox = $("#" + jugador + " #numsecs");
         $("#" + jugador + " #clock-ticker").show();
         clearInterval(intervalo);
-        intervalo = setInterval(function() {
+        intervalo = setInterval(function () {
             var currentSeconds = theSecsBox.text();
             if (currentSeconds == 0) {
                 clearInterval(intervalo);
@@ -63,18 +89,18 @@ var torneoBandas = (function() {
         var tiempoMinimoJugadorUno = true;
         var tiempoMinimoJugadorDos = true;
 
-        $("#nextPlayer1").live("click", function() {
+        $("#nextPlayer1").live("click", function () {
             ejecutarNext();
             return false;
         });
 
-        $("#stopPlayer2").live("click", function() {
+        $("#stopPlayer2").live("click", function () {
             ejecutarStop();
             return false;
         });
 
         $(".torneo-bandas-audio-player").jPlayer({
-            ready: function() {
+            ready: function () {
                 var id = $(this).parent(".jugador").attr("data-id");
                 $(this).jPlayer("setMedia", {
                     mp3: path_audios + "/" + id
@@ -84,37 +110,37 @@ var torneoBandas = (function() {
                 }
             },
             swfPath: jPlayerSwfPath,
-            play: function(event) {
+            play: function (event) {
                 $(this).jPlayer("pauseOthers");
             },
-            timeupdate: function(event) {
+            timeupdate: function (event) {
                 if (recarga) {
                     return;
                 }
                 var jugador = $(this).parent(".jugador").attr("id");
                 if (event.jPlayer.status.currentTime >= segundos) {
                     if ((jugador == "player01") && tiempoMinimoJugadorUno) {
-                        comunidadfusa.util.mostrarCargando();
+//                        comunidadfusa.util.mostrarCargando();
                         $("#player01 #clock-ticker").hide();
                         $("#playPlayer1").hide();
                         $("#nextPlayer1").show();
-                        comunidadfusa.util.ocultarCargando();
+//                        comunidadfusa.util.ocultarCargando();
                         tiempoMinimoJugadorUno = false;
 
                     }
                     if ((jugador == "player02") && tiempoMinimoJugadorDos) {
-                        comunidadfusa.util.mostrarCargando();
+//                        comunidadfusa.util.mostrarCargando();
                         $("#player02 #clock-ticker").hide();
                         $("#playPlayer2").hide();
                         $("#stopPlayer2").show();
-                        comunidadfusa.util.ocultarCargando();
+//                        comunidadfusa.util.ocultarCargando();
                         tiempoMinimoJugadorDos = true;
 
                     }
 
                 }
             },
-            ended: function() {
+            ended: function () {
                 if (recarga) {
                     $(".btReload").show();
                     $(".btPause").hide();
@@ -125,22 +151,22 @@ var torneoBandas = (function() {
             solution: "flash, html"
         });
 
-        $("#reloadPlayer1").live("click", function() {
+        $("#reloadPlayer1").live("click", function () {
             ejecutarRecargar(1);
             return false;
         });
 
-        $("#reloadPlayer2").live("click", function() {
+        $("#reloadPlayer2").live("click", function () {
             ejecutarRecargar(2);
             return false;
         });
 
-        $("#pausePlayer1").live("click", function() {
+        $("#pausePlayer1").live("click", function () {
             ejecutarPausar(1);
             return false;
         });
 
-        $("#pausePlayer2").live("click", function() {
+        $("#pausePlayer2").live("click", function () {
             ejecutarPausar(2);
             return false;
         });
@@ -193,15 +219,15 @@ var torneoBandas = (function() {
             id_visitante: audios[1].id,
             partido: partido
         };
-        $(".resultadoPartido").live("click", function() {
+        $(".resultadoPartido").live("click", function () {
             data.resultado = $(this).attr("data-resultado");
-            comunidadfusa.service.torneo.guardarResultadoPartido({
+            cguardarResultadoPartido({
                 data: data,
-                beforeSend: comunidadfusa.util.mostrarCargando(),
-                success: function(data) {
+//                beforeSend: comunidadfusa.util.mostrarCargando(),
+                success: function (data) {
                     $("#contenidoDelTorneo").empty();
                     $("#contenidoDelTorneo").html(data);
-                    comunidadfusa.util.ocultarCargando();
+//                    comunidadfusa.util.ocultarCargando();
                 }
             });
             return false;
