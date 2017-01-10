@@ -134,16 +134,6 @@ body{
     opacity:1;
     filter:alpha(opacity=100);
 }
-/*#btJugar {
-    text-decoration:none;
-    background:url("../images/juegos/torneo-de-bandas/btJugar01.jpg");
-    cursor:pointer;
-    width:550px;
-    height:60px;
-}*/
-/*#btJugar:hover{
-    background:url("../images/juegos/torneo-de-bandas/btJugar02.jpg");
-}*/
 .tagline{
     width:10vw;
 }
@@ -166,8 +156,6 @@ body{
     display:inline-block;
     vertical-align: top;
 }
-/*#player01{	background: url("../images/juegos/torneo-de-bandas/player1.png");}
-#player02{	background: url("../images/juegos/torneo-de-bandas/player2.png");}*/
 
 .playerActivo {
     border-bottom:#cfcfcf 1px solid;
@@ -181,7 +169,7 @@ body{
 .btPause {
     width:60px;
     float:right;
-    margin:175px 5px 0px 0px;
+    margin:0px 5px 0px 0px;
     display:none;
 }
 .playerActivo .btPlay{ display:inline;}

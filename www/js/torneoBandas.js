@@ -7,8 +7,7 @@ var torneoBandas = (function () {
     var autoplay;
 
     function getAudiosPartido(options) {
-        var url = baseURILayout + "/juegos/torneo-de-bandas/audios";
-
+        var url = baseURILayout + "/servicios/juegos/torneo-de-bandas/audios";
         $.ajax({
             type: "GET",
             dataType: "json",
@@ -44,6 +43,7 @@ var torneoBandas = (function () {
                 inicializarReproductores();
                 inicializarPasosDelJuego();
                 inicializarResultados();
+                
 //                comunidadfusa.util.ocultarCargando();
             }
         });
@@ -60,13 +60,13 @@ var torneoBandas = (function () {
     function jugar($boton) {
 //        comunidadfusa.util.mostrarCargando();
         timerDescendiente("player01");
-        $boton.hide();
+//        $boton.hide();
         $("#btVerPosiciones").hide();
         $("#escuchaUno").css("visibility", "visible");
         ejecutarPlay("player01", "play");
         $("#player01").addClass("playerActivo");
         temaActivo = 1;
-        comunidadfusa.util.ocultarCargando();
+//        comunidadfusa.util.ocultarCargando();
     }
 
     function timerDescendiente(jugador) {
@@ -108,6 +108,7 @@ var torneoBandas = (function () {
                 if (autoplay) {
                     $("#btJugar").click();
                 }
+                jugar();
             },
             swfPath: jPlayerSwfPath,
             play: function (event) {
@@ -148,7 +149,7 @@ var torneoBandas = (function () {
             },
             preload: "auto",
             volume: "1",
-            solution: "flash, html"
+            solution: "html, flash"
         });
 
         $("#reloadPlayer1").live("click", function () {

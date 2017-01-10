@@ -46,10 +46,12 @@ and open the template in the editor.
                 <div id="jugadores">
                     <div id="player01" class="jugador">
                         <img src="images/juegos/torneo-de-bandas/player1.png" class="remeraJugador"/>
-                        <img src="images/juegos/torneo-de-bandas/playBt.png" class="btPlay" id="playPlayer1"/>
-                        <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
-                        <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer1"/>
-                        <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer1"/>
+                        <div class="acciones-partido">
+                            <img src="images/juegos/torneo-de-bandas/playBt.png" class="btPlay" id="playPlayer1"/>
+                            <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
+                            <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer1"/>
+                            <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer1"/>
+                        </div>
                         <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
                         </div>
                         <div id="clock-ticker" class="clearfix">
@@ -62,10 +64,12 @@ and open the template in the editor.
                     <div class="versus"></div>
                     <div id="player02" class="jugador">
                         <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador"/>
-                        <img src="images/juegos/torneo-de-bandas/playBt.png" class="btPlay" id="playPlayer2"/>
-                        <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
-                        <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer2"/>
-                        <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer2"/>
+                        <div class="acciones-partido">
+                            <img src="images/juegos/torneo-de-bandas/playBt.png" class="btPlay" id="playPlayer2"/>
+                            <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
+                            <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer2"/>
+                            <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer2"/>
+                        </div>
                         <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
                         </div>
                         <div id="clock-ticker" class="clearfix">
@@ -84,10 +88,10 @@ and open the template in the editor.
         <script src="js/torneoBandas.js" type="text/javascript"></script>
         <script src="js/opcionesGanadorTorneo.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="/js/lib/jquery.jPlayer/jquery.jplayer.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jPlayer/jquery.jplayer.min.js"></script>
         <script type="text/javascript">
             var path_audios = "http://www.comunidadfusa.com/reproductor/audio/";
-            var jPlayerSwfPath = "https://www.comunidadfusa.com/js/lib/jquery.jPlayer";
+            var jPlayerSwfPath = "js/lib/jquery.jPlayer";
 //            $("#btVerPosiciones").live("click", function () {
 //                window.location = "<?php echo url_for('@torneo_de_bandas_posiciones') ?>";
 //            });
