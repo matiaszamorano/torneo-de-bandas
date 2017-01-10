@@ -37,6 +37,10 @@
 .login .form-group {
     margin: 20px;
 }
+
+.home .contenidoDelTorneo{
+    text-align: center;
+}
 .home .cabecera img{
     width:16vw;
 }
@@ -51,14 +55,14 @@
     height:12vh;
     right: 20px;
     position: absolute;
+    padding-bottom: 5vh;
 }
 
 #partido-opciones {
-    width:70vw;
+    width:65vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20vh;
 }
 
 #partido-opciones img {

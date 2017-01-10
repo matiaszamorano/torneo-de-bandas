@@ -29,8 +29,8 @@ login = (function () {
 
             torneoDeBandas.service.post(url, data)
                     .done(function (data) {
-                        torneoBandas.service.usuario.set(data["usuario"]);
-                        window.location.reload(true);
+                        torneoDeBandas.service.usuario.set(data["usuario"]);
+                        window.location = "index.html";
                     })
                     .fail(function (error) {
                         $("#spin").addClass("hide");
