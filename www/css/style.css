@@ -81,13 +81,16 @@ body{
     padding:0px;
 }
 .contenedor{
-    width:100vw;
     min-height:100vh;
-    padding:20px 0;
+    padding:15px 10px;
     border-right: 1px solid #F6F6F6;
     border-left: 1px solid #F6F6F6;
     background: #FFF; 
     font-family: "SilkscreenNormal", sans-serif;
+}
+
+.contenedor h2{
+    color: orange;
 }
 
 #btReglas {
