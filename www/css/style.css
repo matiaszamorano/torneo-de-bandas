@@ -22,11 +22,36 @@
     display: none;
 }
 
+.login{
+    text-align: center;
+}
+
+.rounded{
+    border-radius: 500px;
+}
+.login .form-control::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.login .form-control {
+    border: 1px solid #ccc;
+    height: 40px;
+    text-align: center;
+}
+.login .form-group {
+    margin: 20px;
+}
+
+.home .contenidoDelTorneo{
+    text-align: center;
+}
+.home .cabecera img{
+    width:16vw;
+}
 .home .cabecera .logo {
-    width:100%;
+    width:62vw;
     margin-left: auto;
     margin-right: auto;
-    display: block;
 }
 
 .contenedorPartido .imagen-cabecera {
@@ -34,14 +59,14 @@
     height:12vh;
     right: 20px;
     position: absolute;
+    padding-bottom: 5vh;
 }
 
 #partido-opciones {
-    width:90vw;
+    width:65vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20vh;
 }
 
 #partido-opciones img {

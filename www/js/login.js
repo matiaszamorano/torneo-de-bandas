@@ -29,8 +29,8 @@ login = (function () {
 
             torneoDeBandas.service.post(url, data)
                     .done(function (data) {
-                        torneoBandas.service.usuario.set(data["usuario"]);
-                        window.location.reload(true);
+                        torneoDeBandas.service.usuario.set(data["usuario"]);
+                        window.location = "index.html";
                     })
                     .fail(function (error) {
                         $("#spin").addClass("hide");
@@ -49,7 +49,7 @@ login = (function () {
 
     function mostrarError(mensaje) {
         var $error = $("#login_error");
-        var $li = $error.find("ul.error_list li");
+        var $li = $error.find(".login .error_list");
         $li.text(mensaje);
         $error.removeClass("hide");
     }
