@@ -4,18 +4,22 @@
 #escuchaUno, #escuchaDos {
     width: 100vw;
 }
-#escuchaUno img{
-    visibility: hidden;
-    /*display: none;*/
+
+.tagline img {
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
+#escuchaUno img{
+    visibility: hidden;
+}
 
 #escuchaDos img{
     display: none;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+#elegiGanador {
+    display: none;
 }
 
 .home .cabecera .logo {
@@ -185,10 +189,7 @@ body{
     display:inline-block;
 }
 
-/* Elegir resultado */
-#elegiGanador {
-    display: none;
-}
+
 
 
 
@@ -481,11 +482,11 @@ div, section, span { display: block; }
     display: none;
 }
 #clock-ticker .block { 
-/*    position: relative; 
-    color: #000; 
-    font-weight: bold; 
-    margin-left: 230px; 
-    margin-top: -18px;*/
+    /*    position: relative; 
+        color: #000; 
+        font-weight: bold; 
+        margin-left: 230px; 
+        margin-top: -18px;*/
 }
 
 #player01 #clock-ticker .block { 

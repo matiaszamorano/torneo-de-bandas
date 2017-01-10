@@ -217,7 +217,7 @@ var torneoBandas = (function () {
         $("#stopPlayer2").hide();
         $("#elegirResultado").show();
         $(".btReload").show();
-        $("#elegiGanador").show();
+        $("#elegiGanador img").css("display", "block");
     }
 
     function inicializarResultados() {
