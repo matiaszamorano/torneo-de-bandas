@@ -49,7 +49,7 @@ login = (function () {
 
     function mostrarError(mensaje) {
         var $error = $("#login_error");
-        var $li = $error.find("ul.error_list li");
+        var $li = $error.find(".login .error_list");
         $li.text(mensaje);
         $error.removeClass("hide");
     }
