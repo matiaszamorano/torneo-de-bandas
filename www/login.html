@@ -1,0 +1,68 @@
+<html>
+    <head>
+
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/index.css" type="text/css" >
+        <title>Torneo de bandas - Descubrí música jugando</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="fonts/Silkscreen-fontfacekit/stylesheet.css" type="text/css" media="all" />
+
+        <script type="text/javascript">
+            var baseURILayout = "http://www.comunidadfusa.com";
+            var baseURIHashLayout = "http://www.comunidadfusa.com";
+            var url_fusa_home = "http://www.comunidadfusa.com";
+        </script>
+        <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+
+    </head>
+    <body>
+        <section id="login" class="wrapper-md animated fadeInUp">
+            <div class="container aside-xl">
+                <section class="m-b-lg">
+                    <header class="wrapper text-center">
+                        <strong>Ingresá tus datos</strong>
+                        <div id="login_error" class="text-center m-t text-danger-lt hide">
+                            <span>
+                                <ul class="error_list">
+                                    <li></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </header>
+                    <form id="form_login" action="#">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" class="form-control rounded input-lg text-center no-border" id="form_email" >
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Clave" class="form-control rounded input-lg text-center no-border" id="form_clave">
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-info lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">Ingresar</span></button>
+                        <div class="text-center m-t-sm hide" id="spin">
+                            <i class="fa fa-spin fa-spinner fa-2x"></i>
+                        </div>
+                        <div class="line line-dashed"></div>
+                        <p class="text-muted text-center"><small>No tenés cuenta? Registrate en</small></p>
+                        <div class="text-center m-t m-b">
+                            <a href="http://www.comunidadfusa.com" target="_blank"><small>comunidadfusa.com</small></a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+        
+        <script type="text/javascript" src="js/app/app.js"></script>
+        <script type="text/javascript" src="js/app/service/service.js"></script>
+        <script type="text/javascript" src="js/app/service/usuario/usuario.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                login.init();
+            });
+        </script>
+    </body>
+</html>
