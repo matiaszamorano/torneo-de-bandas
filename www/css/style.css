@@ -4,18 +4,22 @@
 #escuchaUno, #escuchaDos {
     width: 100vw;
 }
-#escuchaUno img{
-    visibility: hidden;
-    /*display: none;*/
+
+.tagline img {
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
+#escuchaUno img{
+    visibility: hidden;
+}
 
 #escuchaDos img{
     display: none;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+#elegiGanador {
+    display: none;
 }
 
 .login{
@@ -213,10 +217,7 @@ body{
     display:inline-block;
 }
 
-/* Elegir resultado */
-#elegiGanador {
-    display: none;
-}
+
 
 
 
