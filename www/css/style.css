@@ -16,7 +16,6 @@
     display: none;
     margin-left: auto;
     margin-right: auto;
-    /*display: block;*/
 }
 
 .home .cabecera .logo {
@@ -62,7 +61,7 @@ body{
     padding:20px 0;
     border-right: 1px solid #F6F6F6;
     border-left: 1px solid #F6F6F6;
-    background: whitesmoke; 
+    background: #FFF; 
     font-family: "SilkscreenNormal", sans-serif;
 }
 
@@ -475,15 +474,18 @@ div#cargando, .cargando {
 div, section, span { display: block; }
 
 #clock-ticker { 
-    width: 100px; 
+    width:5vw;
+    height:5vh;
+    right: 30px;
+    position: absolute;
     display: none;
 }
 #clock-ticker .block { 
-    position: relative; 
+/*    position: relative; 
     color: #000; 
     font-weight: bold; 
     margin-left: 230px; 
-    margin-top: -18px;
+    margin-top: -18px;*/
 }
 
 #player01 #clock-ticker .block { 

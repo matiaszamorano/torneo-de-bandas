@@ -19,7 +19,7 @@ var torneoBandas = (function () {
     }
 
     function guardarResultadoPartido(options) {
-        var url = baseURILayout + "/juegos/torneo-de-bandas/partido/resultado";
+        var url = baseURILayout + "/servicios/juegos/torneo-de-bandas/partido/resultado";
 
         $.ajax({
             type: "POST",
@@ -31,20 +31,26 @@ var torneoBandas = (function () {
         });
     }
 
+    function mostrarCargando(url) {
+        $('div#cargando').show();
+    }
+
+    function ocultarCargando() {
+        $('div#cargando').hide();
+    }
     function obtenerAudios() {
         getAudiosPartido({
-//            beforeSend: comunidadfusa.util.mostrarCargando(),
+            beforeSend: mostrarCargando(),
             success: function (data) {
                 audios = data.audios;
                 partido = data.partido;
                 $('#player01').attr('data-id', data.audios[0].id);
                 $('#player02').attr('data-id', data.audios[1].id);
-                $('.flip-top').html(segundos);
                 inicializarReproductores();
                 inicializarPasosDelJuego();
                 inicializarResultados();
-                
-//                comunidadfusa.util.ocultarCargando();
+
+                ocultarCargando();
             }
         });
     }
@@ -58,21 +64,21 @@ var torneoBandas = (function () {
     }
 
     function jugar($boton) {
-//        comunidadfusa.util.mostrarCargando();
-        timerDescendiente("player01");
+        mostrarCargando();
+        timerDescendiente();
 //        $boton.hide();
         $("#btVerPosiciones").hide();
-        $("#escuchaUno").css("visibility", "visible");
+        $("#escuchaUno img").css("visibility", "visible");
         ejecutarPlay("player01", "play");
         $("#player01").addClass("playerActivo");
         temaActivo = 1;
-//        comunidadfusa.util.ocultarCargando();
+        ocultarCargando();
     }
 
-    function timerDescendiente(jugador) {
-
-        var theSecsBox = $("#" + jugador + " #numsecs");
-        $("#" + jugador + " #clock-ticker").show();
+    function timerDescendiente() {
+        var theSecsBox = $("#numsecs");
+        $('.flip-top').html(segundos);
+        $("#clock-ticker").show();
         clearInterval(intervalo);
         intervalo = setInterval(function () {
             var currentSeconds = theSecsBox.text();
@@ -121,20 +127,20 @@ var torneoBandas = (function () {
                 var jugador = $(this).parent(".jugador").attr("id");
                 if (event.jPlayer.status.currentTime >= segundos) {
                     if ((jugador == "player01") && tiempoMinimoJugadorUno) {
-//                        comunidadfusa.util.mostrarCargando();
-                        $("#player01 #clock-ticker").hide();
+                        mostrarCargando();
+                        $("#clock-ticker").hide();
                         $("#playPlayer1").hide();
                         $("#nextPlayer1").show();
-//                        comunidadfusa.util.ocultarCargando();
+                        ocultarCargando();
                         tiempoMinimoJugadorUno = false;
 
                     }
                     if ((jugador == "player02") && tiempoMinimoJugadorDos) {
-//                        comunidadfusa.util.mostrarCargando();
-                        $("#player02 #clock-ticker").hide();
+                        mostrarCargando();
+                        $("#clock-ticker").hide();
                         $("#playPlayer2").hide();
                         $("#stopPlayer2").show();
-//                        comunidadfusa.util.ocultarCargando();
+                        ocultarCargando();
                         tiempoMinimoJugadorDos = true;
 
                     }
@@ -194,9 +200,9 @@ var torneoBandas = (function () {
     }
 
     function ejecutarNext() {
-        $("#escuchaUno").hide();
-        $("#escuchaDos").show();
-        timerDescendiente("player02");
+        $("#escuchaUno img").hide();
+        $("#escuchaDos img").css("display", "block");
+        timerDescendiente();
         $("#reproductorPlayer01").jPlayer("stop");
         ejecutarPlay("player02", "play");
         $("#player01").removeClass("playerActivo");
@@ -222,13 +228,13 @@ var torneoBandas = (function () {
         };
         $(".resultadoPartido").live("click", function () {
             data.resultado = $(this).attr("data-resultado");
-            cguardarResultadoPartido({
+            guardarResultadoPartido({
                 data: data,
-//                beforeSend: comunidadfusa.util.mostrarCargando(),
+                beforeSend: mostrarCargando(),
                 success: function (data) {
                     $("#contenidoDelTorneo").empty();
                     $("#contenidoDelTorneo").html(data);
-//                    comunidadfusa.util.ocultarCargando();
+                    ocultarCargando();
                 }
             });
             return false;

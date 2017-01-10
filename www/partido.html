@@ -27,9 +27,16 @@ and open the template in the editor.
 
     </head>
     <body>
+        <div id="cargando" >Cargando...</div>
         <div class="contenedor contenedorPartido">
             <div class="cabeceraTorneo">
                 <!--<img src="images/juegos/torneo-de-bandas/cabeceraTorneo.jpg" class="imagen-cabecera"/>-->
+                <div id="clock-ticker" class="clearfix">
+                    <div class="block">
+                        <span class="flip-top" id="numsecs"></span>
+                        <span class="flip-btm"></span>
+                    </div>
+                </div>
             </div>
             <div class="contenidoDelTorneo">
                 <div class="tagline">
@@ -54,12 +61,6 @@ and open the template in the editor.
                         </div>
                         <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
                         </div>
-                        <div id="clock-ticker" class="clearfix">
-                            <div class="block">
-                                <span class="flip-top" id="numsecs"></span>
-                                <span class="flip-btm"></span>
-                            </div>
-                        </div>
                     </div>
                     <div class="versus"></div>
                     <div id="player02" class="jugador">
@@ -71,12 +72,6 @@ and open the template in the editor.
                             <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer2"/>
                         </div>
                         <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
-                        </div>
-                        <div id="clock-ticker" class="clearfix">
-                            <div class="block">
-                                <span class="flip-top" id="numsecs"></span>
-                                <span class="flip-btm"></span>
-                            </div>
                         </div>
                     </div>
                 </div>
