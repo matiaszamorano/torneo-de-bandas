@@ -1,7 +1,7 @@
 var torneoBandas = (function () {
     var audios = [];
     var partido = null;
-    var segundos = 15;
+    var segundos = 1;
     var intervalo;
     var recarga;
     var autoplay;
@@ -215,7 +215,7 @@ var torneoBandas = (function () {
         $("#reproductorPlayer02").jPlayer("stop");
         $("#escuchaDos").hide();
         $("#stopPlayer2").hide();
-        $("#elegirResultado").show();
+        $("#elegirResultado").css("display", "block");
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");
     }
