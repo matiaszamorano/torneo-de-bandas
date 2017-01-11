@@ -239,7 +239,7 @@ var torneoBandas = (function () {
                         window.location = "ganador.html";
                     } else {
                         //empate
-
+                        window.location = "empate.html";
                     }
                     $(".contenidoDelTorneo").empty();
 //                    $(".contenidoDelTorneo").html(data);
