@@ -86,11 +86,14 @@ body{
 }
 .contenedor{
     min-height:100vh;
-    /*padding:15px 10px;*/
     border-right: 1px solid #F6F6F6;
     border-left: 1px solid #F6F6F6;
     background: #FFF; 
     font-family: "SilkscreenNormal", sans-serif;
+}
+
+.contenedor.home {
+    padding:15px 10px;
 }
 
 .contenedor h2{
