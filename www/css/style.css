@@ -121,7 +121,24 @@ body{
     background:url("../images/juegos/torneo-de-bandas/btNuevoPartido02.jpg");
 }
 
-#reloadPlayer2 {
+.btPlay {
+    width:60px;
+    float:right;
+    margin:0px 5px 0px 0px;
+    display:none;
+}
+.playerActivo .btPlay{ display:inline;}
+
+.btNext, 
+.btStop,
+.btReload,
+.btPause {
+    cursor: pointer;
+}
+
+#reloadPlayer2,
+#pausePlayer2,
+#stopPlayer2{
     position: absolute;
     width:60px;
     top: 5vh;
@@ -129,7 +146,9 @@ body{
     display:none;
 }
 
-#reloadPlayer1 {
+#reloadPlayer1,
+#pausePlayer1,
+#nextPlayer1{
     position: absolute;
     width:60px;
     top: 5vh;
@@ -207,23 +226,7 @@ body{
     background-color:#e1eeff !important;
 }
 
-.btPlay, 
-.btNext,
-.btStop,
-.btPause {
-    width:60px;
-    float:right;
-    margin:0px 5px 0px 0px;
-    display:none;
-}
-.playerActivo .btPlay{ display:inline;}
 
-.btNext, 
-.btStop,
-.btReload,
-.btPause {
-    cursor: pointer;
-}
 .versus{
     width:80px;
     height:150px;
