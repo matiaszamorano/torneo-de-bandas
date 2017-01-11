@@ -5,6 +5,10 @@
     width: 100vw;
 }
 
+.tagline {
+    width: 100vw;
+}
+
 .tagline img {
     margin-left: auto;
     margin-right: auto;
@@ -201,16 +205,16 @@ body{
     opacity:1;
     filter:alpha(opacity=100);
 }
-.tagline{
+/*.tagline{
     width:10vw;
-}
+}*/
 .tagline img {
     height: 18vh;
 }
 /* Jugadores */
 #jugadores{
     width:100vw;
-    padding:10px 0px;
+    padding:10px 0px 0;
     margin: 0 auto;
     text-align: center;
     vertical-align: top;
@@ -305,25 +309,24 @@ body{
     -moz-border-radius: 14px;
     -webkit-border-radius: 14px;
     border-radius: 14px;
-    width:300px;
-    height:240px;
+    width:50vw;
+    height:50vh;
     display:inline-block;
     cursor:pointer;
     border-bottom:#cfcfcf 1px solid;
     background-color:#e1eeff;
     margin: 0 auto;
 }
-#resultadoPlayer01{	background-image: url("../images/juegos/torneo-de-bandas/player1.png");}
-#resultadoPlayer02{	background-image: url("../images/juegos/torneo-de-bandas/player2.png");}
 
 #resultadoPlayer02 img, #resultadoPlayer01 img{
-    width:110px !important;
-    height:110px !important;
+    max-height: 95%; 
+    /*    width:110px !important;
+        height:110px !important;*/
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     border:#d6d6d6 1px solid;
-    margin:45px 90px;
+    margin-top:1%;
 }
 #puntaje1{
     width:80px;
@@ -397,9 +400,12 @@ a:hover {
 
 #nombreGanador{
     padding:5px;
+    height: 40vh;
     text-align:center;
     display: inline-block;
-    width: 300px;
+    width: 40vw;
+    vertical-align: top;
+    padding-top: 10vh;
 }
 .nombreDerecha{ margin-left:120px !important;}
 .nombreBandaGanadora{

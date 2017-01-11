@@ -224,7 +224,8 @@ var torneoBandas = (function () {
         var data = {
             id_local: audios[0].id,
             id_visitante: audios[1].id,
-            partido: partido
+            partido: partido,
+            mobile: true
         };
         $(".resultadoPartido").live("click", function () {
             data.resultado = $(this).attr("data-resultado");
@@ -232,8 +233,16 @@ var torneoBandas = (function () {
                 data: data,
                 beforeSend: mostrarCargando(),
                 success: function (data) {
-                    $("#contenidoDelTorneo").empty();
-                    $("#contenidoDelTorneo").html(data);
+                    var audios = JSON.parse(data);
+                    if (audios.length == 1) {
+                        // ganó uno
+                        window.location = "ganador.html";
+                    } else {
+                        //empate
+
+                    }
+                    $(".contenidoDelTorneo").empty();
+//                    $(".contenidoDelTorneo").html(data);
                     ocultarCargando();
                 }
             });

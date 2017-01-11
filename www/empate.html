@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/index.css" type="text/css" >
+        <title>Torneo de bandas - Descubrí música jugando</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="fonts/Silkscreen-fontfacekit/stylesheet.css" type="text/css" media="all" />
+
+        <script type="text/javascript">
+            var baseURILayout = "http://www.comunidadfusa.com";
+            var baseURIHashLayout = "http://www.comunidadfusa.com";
+            var url_fusa_home = "http://www.comunidadfusa.com";
+        </script>
+        <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+
+    </head>
+    <body>
+        <div id="cargando" >Cargando...</div>
+        <div class="contenedor contenedorPartido">
+            <div class="cabeceraTorneo">
+                <!--<img src="images/juegos/torneo-de-bandas/cabeceraTorneo.jpg" class="imagen-cabecera"/>-->
+                <div id="clock-ticker" class="clearfix">
+                    <div class="block">
+                        <span class="flip-top" id="numsecs"></span>
+                        <span class="flip-btm"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="contenidoDelTorneo">
+                <div id="tagline">
+                    <img src="images/juegos/torneo-de-bandas/resultado.jpg"/>
+                </div>
+
+                <div id="jugadores">
+                    <div id="resultadoPlayer01">
+                        <a href="" target="_blank">
+                            <img src="http://www.comunidadfusa.com/uploads/bandas/thumbnail/BANDA_2335_53a9c5b_THUMB.jpg" >
+                        </a>
+                    </div>
+                    <div class="igual"></div>
+                    <div id="resultadoPlayer02">
+                        <a href="" target="_blank">
+                            <img src="http://www.comunidadfusa.com/uploads/bandas/thumbnail/BANDA_2335_53a9c5b_THUMB.jpg" >
+                        </a>
+                    </div>
+
+                    <div id="nombreGanador">
+                        <div class="nombreBandaGanadora">
+                            <a href="" target="_blank">
+                                Carolina Estefanía Sena 
+                            </a>
+                        </div>
+                        <div class="nombreTema">La Renga - Veneno (cover)</div>
+                    </div>
+                    <div id="nombreGanador" class="nombreDerecha">
+                        <div class="nombreBandaGanadora">
+                            <a href="" target="_blank">
+                                Carolina Estefanía Sena 
+                            </a>
+                        </div>
+                        <div class="nombreTema">La Renga - Veneno (cover)</div>
+                    </div>
+                </div>
+
+                <div id="resultadoPuntaje">
+                    <div id="puntaje1"></div>
+                    <div id="puntaje1" class="puntaje1Der"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/torneoBandas.js" type="text/javascript"></script>
+        <script src="js/opcionesGanadorTorneo.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.jPlayer/jquery.jplayer.min.js"></script>
+    </body>
+</html>
