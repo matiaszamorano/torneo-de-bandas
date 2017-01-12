@@ -1,9 +1,6 @@
 /*******************************************************************************
    Comunidad~fusa.com.ar
 *******************************************************************************/
-#escuchaUno, #escuchaDos, #elegiGanador {
-    width: 100vw;
-}
 
 .tagline {
     width: 100vw;
@@ -13,13 +10,6 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
-#escuchaUno img{
-    visibility: hidden;
-}
-
-#escuchaDos img{
-    display: none;
 }
 
 #elegiGanador img{
@@ -46,9 +36,15 @@
     margin: 20px;
 }
 
-.home .contenidoDelTorneo{
+.contenidoDelTorneo{
     text-align: center;
+    border-right: 1px solid #F6F6F6;
+    border-left: 1px solid #F6F6F6;
+    background: whitesmoke;
+    font-family: "SilkscreenNormal", sans-serif;
+    min-height:100vh;
 }
+
 .home .cabecera img{
     width:16vw;
 }
@@ -87,13 +83,6 @@
 body{
     margin:0px;
     padding:0px;
-}
-.contenedor{
-    min-height:100vh;
-    border-right: 1px solid #F6F6F6;
-    border-left: 1px solid #F6F6F6;
-    background: #FFF; 
-    font-family: "SilkscreenNormal", sans-serif;
 }
 
 .contenedor.home {
@@ -136,17 +125,9 @@ body{
 }
 .playerActivo .btPlay{ display:inline;}
 
-.btNext, 
-.btStop,
-.btReload,
-.btPause {
-    cursor: pointer;
-}
-
 #reloadPlayer2,
 #pausePlayer2,
 #stopPlayer2{
-    position: absolute;
     width:60px;
     top: 5vh;
     right: 5vw;
@@ -156,7 +137,6 @@ body{
 #reloadPlayer1,
 #pausePlayer1,
 #nextPlayer1{
-    position: absolute;
     width:60px;
     top: 5vh;
     left: 5vw;
@@ -233,14 +213,6 @@ body{
     background-color:#e1eeff !important;
 }
 
-
-.versus{
-    width:80px;
-    height:150px;
-    background: no-repeat center center url("../images/juegos/torneo-de-bandas/vs.jpg");
-    margin:0px 5px;
-    display:inline-block;
-}
 
 .ganadorLocal {
     margin-left: 14vw;
@@ -572,8 +544,6 @@ div#cargando, .cargando {
 }
 
 /** basic style sets **/
-
-div, section, span { display: block; }
 
 #clock-ticker { 
     width:5vw;

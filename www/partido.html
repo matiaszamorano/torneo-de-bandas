@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
         <link rel="stylesheet" href="css/index.css" type="text/css" >
         <title>Torneo de bandas - Descubrí música jugando</title>
@@ -24,56 +25,98 @@ and open the template in the editor.
         </script>
         <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.js"></script>
 
     </head>
     <body>
         <div id="cargando" >Cargando...</div>
-        <div class="contenedor contenedorPartido">
-            <div class="cabeceraTorneo">
-                <!--<img src="images/juegos/torneo-de-bandas/cabeceraTorneo.jpg" class="imagen-cabecera"/>-->
-                <div id="clock-ticker" class="clearfix">
-                    <div class="block">
-                        <span class="flip-top" id="numsecs"></span>
-                        <span class="flip-btm"></span>
+        <div class="container-fluid">
+
+            <div class="row contenidoDelTorneo">
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <div id="escucha">
+                            <img src="images/juegos/torneo-de-bandas/escucha01.png"/>
+                        </div>
+                        <div id="elegiGanador">
+                            <img src="images/juegos/torneo-de-bandas/elegir.jpg"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div id="clock-ticker" class="clearfix">
+                            <div class="block">
+                                <span class="flip-top" id="numsecs"></span>
+                                <span class="flip-btm"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="contenidoDelTorneo">
-                <div class="tagline">
-                    <div id="elegiGanador">
-                        <img src="images/juegos/torneo-de-bandas/elegir.jpg"/>
+                <div id="jugadores" class="row">
+                    <div class="col-xs-5">
+                        <div class="btn btn-default">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer1"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer1"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img src="images/juegos/torneo-de-bandas/player1.png" class="remeraJugador img-responsive center-block"/>
+                                </div>
+                            </div>
+                            <div id="player01" class="jugador row">
+                                <div class="acciones-partido">
+                                </div>
+                                <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="escuchaUno">
-                        <img src="images/juegos/torneo-de-bandas/escucha01.jpg"/>
-                    </div>
-                    <div id="escuchaDos">
-                        <img src="images/juegos/torneo-de-bandas/escucha02.jpg"/>
-                    </div>
-                </div>
-                <div id="jugadores">
-                    <div id="player01" class="jugador">
-                        <img src="images/juegos/torneo-de-bandas/player1.png" class="remeraJugador"/>
-                        <div class="acciones-partido">
+
+                    <div class="col-xs-2">
+                        <div class="row">
                             <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
-                            <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer1"/>
-                            <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer1"/>
                         </div>
-                        <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
+                        <div class="row">
+                            <img src="images/juegos/torneo-de-bandas/vs.png"/>
                         </div>
                     </div>
-                    <div class="versus"></div>
-                    <div id="player02" class="jugador">
-                        <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador"/>
-                        <div class="acciones-partido">
-                            <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
-                            <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload" id="reloadPlayer2"/>
-                            <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause" id="pausePlayer2"/>
-                        </div>
-                        <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
+
+                    <div class="col-xs-5">
+                        <div class="btn btn-default">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer2"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer2"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador img-responsive center-block"/>
+                                </div>
+                            </div>
+                            <div id="player01" class="jugador row">
+                                <div class="acciones-partido">
+                                </div>
+                                <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="elegirResultado">
+                <div id="elegirResultado" class="row">
                     <div class="ganadorLocal">
                         <img id="elegirGanador" class="resultadoPartido" data-resultado="0" src="images/juegos/torneo-de-bandas/ganador.png"/>
                     </div>
@@ -85,7 +128,6 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-
         </div>
 
         <script type="text/javascript" src="cordova.js"></script>
@@ -96,9 +138,9 @@ and open the template in the editor.
         <script type="text/javascript">
             var path_audios = "http://www.comunidadfusa.com/reproductor/audio/";
             var jPlayerSwfPath = "js/lib/jquery.jPlayer";
-//            $("#btVerPosiciones").live("click", function () {
-//                window.location = "<?php echo url_for('@torneo_de_bandas_posiciones') ?>";
-//            });
+            //            $("#btVerPosiciones").live("click", function () {
+            //                window.location = "<?php echo url_for('@torneo_de_bandas_posiciones') ?>";
+            //            });
             torneoBandas.init("1");
         </script>
     </body>
