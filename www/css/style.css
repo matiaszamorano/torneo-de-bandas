@@ -4,6 +4,11 @@
 body {
     width: 100vw;    
     background-color: #FFF;
+    max-height: 100vh;
+}
+
+.row {
+    max-width: 100vw;
 }
 
 .tagline {
@@ -661,7 +666,8 @@ div#cargando, .cargando {
 }
 
 .notas-musicales img {
-    width: 58px;
+    width: 35px;
+    height: 30px;
     visibility: hidden;
 }
 
