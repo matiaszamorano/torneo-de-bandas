@@ -68,9 +68,8 @@ var torneoBandas = (function () {
         timerDescendiente();
 //        $boton.hide();
         $("#btVerPosiciones").hide();
-        $("#escuchaUno img").css("visibility", "visible");
+        $(".jugador1 .notas-musicales img").css("visibility", "visible");
         ejecutarPlay("player01", "play");
-        $("#player01").addClass("playerActivo");
         temaActivo = 1;
         ocultarCargando();
     }
@@ -130,7 +129,7 @@ var torneoBandas = (function () {
                         mostrarCargando();
                         $("#clock-ticker").hide();
                         $("#playPlayer1").hide();
-                        $("#nextPlayer1").show();
+                        $("#nextPlayer1").css("visibility", "visible");
                         ocultarCargando();
                         tiempoMinimoJugadorUno = false;
 
@@ -139,7 +138,7 @@ var torneoBandas = (function () {
                         mostrarCargando();
                         $("#clock-ticker").hide();
                         $("#playPlayer2").hide();
-                        $("#stopPlayer2").show();
+                        $("#stopPlayer2").css("visibility", "visible");
                         ocultarCargando();
                         tiempoMinimoJugadorDos = true;
 
@@ -202,19 +201,18 @@ var torneoBandas = (function () {
     function ejecutarNext() {
         $("#escuchaUno img").hide();
         $("#escuchaDos img").css("display", "block");
+        $(".jugador1 .notas-musicales img").css("visibility", "hidden");
+        $(".jugador2 .notas-musicales img").css("visibility", "visible");
         timerDescendiente();
         $("#reproductorPlayer01").jPlayer("stop");
         ejecutarPlay("player02", "play");
-        $("#player01").removeClass("playerActivo");
-        $("#player02").addClass("playerActivo");
-        $("#nextPlayer1").hide();
+        $("#nextPlayer1").css("visibility", "hidden");
     }
 
     function ejecutarStop() {
-        $("#player02").removeClass("playerActivo");
         $("#reproductorPlayer02").jPlayer("stop");
         $("#escuchaDos").hide();
-        $("#stopPlayer2").hide();
+        $("#stopPlayer2").css("visibility", "hidden");
         $("#elegirResultado").css("display", "block");
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");

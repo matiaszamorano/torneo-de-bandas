@@ -123,11 +123,9 @@ body{
     margin:0px 5px 0px 0px;
     display:none;
 }
-.playerActivo .btPlay{ display:inline;}
 
 #reloadPlayer2,
-#pausePlayer2,
-#stopPlayer2{
+#pausePlayer2{
     width:60px;
     top: 5vh;
     right: 5vw;
@@ -136,11 +134,12 @@ body{
 
 #reloadPlayer1,
 #pausePlayer1,
+#stopPlayer2,
 #nextPlayer1{
-    width:60px;
+    width:40px;
     top: 5vh;
     left: 5vw;
-    display:none;
+    visibility: hidden;
 }
 /*#btVerPosiciones {
     text-decoration:none;
@@ -192,6 +191,7 @@ body{
     height: 18vh;
 }
 /* Jugadores */
+
 #jugadores{
     width:100vw;
     padding:30px 0px 0;
@@ -207,12 +207,6 @@ body{
     display:inline-block;
     vertical-align: top;
 }
-
-.playerActivo {
-    border-bottom:#cfcfcf 1px solid;
-    background-color:#e1eeff !important;
-}
-
 
 .ganadorLocal {
     margin-left: 14vw;
@@ -695,4 +689,8 @@ div#cargando, .cargando {
     background-color: lightskyblue;
     color: lightyellow;
     padding: 10px;
+}
+
+.notas-musicales img {
+    visibility: hidden;
 }

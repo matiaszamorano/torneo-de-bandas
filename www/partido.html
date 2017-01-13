@@ -53,13 +53,13 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div id="jugadores" class="row">
-                    <div class="col-xs-5">
+                    <div class="col-xs-5 jugador1 jugador">
                         <div class="btn btn-default">
                             <div class="row">
                                 <div class="col-xs-4">
                                     <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer1"/>
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-xs-4 notas-musicales">
                                     <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
                                 </div>
                                 <div class="col-xs-4">
@@ -73,6 +73,9 @@ and open the template in the editor.
                             </div>
                             <div id="player01" class="jugador row">
                                 <div class="acciones-partido">
+                                    <div class="row">
+                                        <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
+                                    </div>
                                 </div>
                                 <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
                                 </div>
@@ -82,20 +85,17 @@ and open the template in the editor.
 
                     <div class="col-xs-2">
                         <div class="row">
-                            <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
-                        </div>
-                        <div class="row">
                             <img src="images/juegos/torneo-de-bandas/vs.png"/>
                         </div>
                     </div>
 
-                    <div class="col-xs-5">
+                    <div class="col-xs-5 jugador2 jugador">
                         <div class="btn btn-default">
                             <div class="row">
                                 <div class="col-xs-4">
                                     <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer2"/>
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-xs-4 notas-musicales">
                                     <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
                                 </div>
                                 <div class="col-xs-4">
@@ -107,10 +107,11 @@ and open the template in the editor.
                                     <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador img-responsive center-block"/>
                                 </div>
                             </div>
-                            <div id="player01" class="jugador row">
+                            <div id="player02" class="jugador row">
                                 <div class="acciones-partido">
+                                    <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
                                 </div>
-                                <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
+                                <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
                                 </div>
                             </div>
                         </div>
