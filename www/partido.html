@@ -13,7 +13,7 @@ and open the template in the editor.
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="css/index.css" type="text/css" >
+        <!--<link rel="stylesheet" href="css/index.css" type="text/css" >-->
         <title>Torneo de bandas - Descubrí música jugando</title>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="fonts/Silkscreen-fontfacekit/stylesheet.css" type="text/css" media="all" />
@@ -30,6 +30,10 @@ and open the template in the editor.
     </head>
     <body>
         <div id="cargando" >Cargando...</div>
+        <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer1"/>
+        <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer1"/>
+        <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer2"/>
+        <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer2"/>
         <div class="container-fluid">
 
             <div class="row contenidoDelTorneo">
@@ -54,77 +58,61 @@ and open the template in the editor.
                 </div>
                 <div id="jugadores" class="row">
                     <div class="col-xs-5 jugador1 jugador">
-                        <div class="btn btn-default">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer1"/>
-                                </div>
-                                <div class="col-xs-4 notas-musicales">
-                                    <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
-                                </div>
-                                <div class="col-xs-4">
-                                    <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer1"/>
+                        <div class="row">
+                            <div class="col-xs-12 notas-musicales">
+                                <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <img src="images/juegos/torneo-de-bandas/player1.png" class="remeraJugador img-responsive center-block"/>
+                            </div>
+                        </div>
+                        <div id="player01" class="jugador row">
+                            <div class="acciones-partido">
+                                <div class="row">
+                                    <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <img src="images/juegos/torneo-de-bandas/player1.png" class="remeraJugador img-responsive center-block"/>
-                                </div>
-                            </div>
-                            <div id="player01" class="jugador row">
-                                <div class="acciones-partido">
-                                    <div class="row">
-                                        <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
-                                    </div>
-                                </div>
-                                <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
-                                </div>
+                            <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-xs-2">
                         <div class="row">
-                            <img src="images/juegos/torneo-de-bandas/vs.png"/>
+                            <img src="images/juegos/torneo-de-bandas/vs.png" class="versus"/>
                         </div>
                     </div>
 
                     <div class="col-xs-5 jugador2 jugador">
-                        <div class="btn btn-default">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <img src="images/juegos/torneo-de-bandas/pause.png" class="btPause img-responsive center-block" id="pausePlayer2"/>
-                                </div>
-                                <div class="col-xs-4 notas-musicales">
-                                    <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
-                                </div>
-                                <div class="col-xs-4">
-                                    <img src="images/juegos/torneo-de-bandas/reload.png" class="btReload img-responsive center-block" id="reloadPlayer2"/>
-                                </div>
+                        <div class="row">
+                            <div class="col-xs-12 notas-musicales">
+                                <img src="images/juegos/torneo-de-bandas/notas-musicales.gif" class="img-responsive center-block"/>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador img-responsive center-block"/>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <img src="images/juegos/torneo-de-bandas/player2.png" class="remeraJugador img-responsive center-block"/>
                             </div>
-                            <div id="player02" class="jugador row">
-                                <div class="acciones-partido">
-                                    <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
-                                </div>
-                                <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
-                                </div>
+                        </div>
+                        <div id="player02" class="jugador row">
+                            <div class="acciones-partido">
+                                <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
+                            </div>
+                            <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="elegirResultado" class="row">
-                    <div class="ganadorLocal">
+                    <div class="col-xs-5 ganadorLocal">
                         <img id="elegirGanador" class="resultadoPartido" data-resultado="0" src="images/juegos/torneo-de-bandas/ganador.png"/>
                     </div>
-                    <div class="empate">
+                    <div class="col-xs-2 empate">
                         <img id="elegirEmpate" class="resultadoPartido" data-resultado="E" src="images/juegos/torneo-de-bandas/empate.png"/>
                     </div>
-                    <div class="ganadorVisitante">
+                    <div class="col-xs-5 ganadorVisitante">
                         <img id="elegirGanador" class="resultadoPartido"  data-resultado="1" src="images/juegos/torneo-de-bandas/ganador.png"/>
                     </div>
                 </div>
