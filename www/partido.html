@@ -72,6 +72,7 @@ and open the template in the editor.
                             <div class="acciones-partido">
                                 <div class="row">
                                     <img src="images/juegos/torneo-de-bandas/next-ltr.png" class="btNext" id="nextPlayer1"/>
+                                    <img id="elegirGanador" class="resultadoPartido" data-resultado="0" src="images/juegos/torneo-de-bandas/ganador.png"/>
                                 </div>
                             </div>
                             <div id="reproductorPlayer01" class="torneo-bandas-audio-player">
@@ -82,6 +83,9 @@ and open the template in the editor.
                     <div class="col-xs-2">
                         <div class="row">
                             <img src="images/juegos/torneo-de-bandas/vs.png" class="versus"/>
+                        </div>
+                        <div class="row contenedorEmpate">
+                            <img id="elegirEmpate" class="resultadoPartido" data-resultado="E" src="images/juegos/torneo-de-bandas/empate.png"/>
                         </div>
                     </div>
 
@@ -99,23 +103,24 @@ and open the template in the editor.
                         <div id="player02" class="jugador row">
                             <div class="acciones-partido">
                                 <img src="images/juegos/torneo-de-bandas/stop.png" class="btStop" id="stopPlayer2"/>
+                                <img id="elegirGanador" class="resultadoPartido"  data-resultado="1" src="images/juegos/torneo-de-bandas/ganador.png"/>
                             </div>
                             <div id="reproductorPlayer02" class="torneo-bandas-audio-player">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="elegirResultado" class="row">
+<!--                <div id="elegirResultado" class="row">
                     <div class="col-xs-5 ganadorLocal">
-                        <img id="elegirGanador" class="resultadoPartido" data-resultado="0" src="images/juegos/torneo-de-bandas/ganador.png"/>
+                        <img id="elegirGanador" class="ganadorLocal resultadoPartido" data-resultado="0" src="images/juegos/torneo-de-bandas/ganador.png"/>
                     </div>
                     <div class="col-xs-2 empate">
-                        <img id="elegirEmpate" class="resultadoPartido" data-resultado="E" src="images/juegos/torneo-de-bandas/empate.png"/>
+                        <img id="elegirEmpate" class="empate resultadoPartido" data-resultado="E" src="images/juegos/torneo-de-bandas/empate.png"/>
                     </div>
                     <div class="col-xs-5 ganadorVisitante">
-                        <img id="elegirGanador" class="resultadoPartido"  data-resultado="1" src="images/juegos/torneo-de-bandas/ganador.png"/>
+                        <img id="elegirGanador" class="ganadorVisitante resultadoPartido"  data-resultado="1" src="images/juegos/torneo-de-bandas/ganador.png"/>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
 

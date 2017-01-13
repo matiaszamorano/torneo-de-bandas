@@ -231,6 +231,7 @@ body{
     -moz-border-radius: 14px;
     -webkit-border-radius: 14px;
     border-radius: 14px;
+    display:none;
 }
 #elegirGanador:hover, #elegirEmpate:hover{
     background-color:#e1eeff;
@@ -675,19 +676,25 @@ div#cargando, .cargando {
     padding-top: 20vh;
 }
 
-#reloadPlayer2{
+#reloadPlayer2,
+#pausePlayer2{
     position: absolute;
-    width:60px;
+    width:55px;
     top: 5vh;
     right: 5vw;
     display:none;
 }
 
-#reloadPlayer1{
+#reloadPlayer1,
+#pausePlayer1{
     position: absolute;
-    width:60px;
+    width:55px;
     top: 5vh;
     left: 5vw;
     display:none;
     margin: 0;
+}
+
+.contenedorEmpate {
+    padding-top: 18vh;
 }

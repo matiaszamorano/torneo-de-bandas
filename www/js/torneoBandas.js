@@ -206,19 +206,19 @@ var torneoBandas = (function () {
         timerDescendiente();
         $("#reproductorPlayer01").jPlayer("stop");
         ejecutarPlay("player02", "play");
-        $("#nextPlayer1").css("visibility", "hidden");
+        $("#nextPlayer1").hide();
     }
 
     function ejecutarStop() {
         $("#reproductorPlayer02").jPlayer("stop");
         $("#escuchaDos").hide();
         $("#escucha").hide();
-        $("#stopPlayer2").css("visibility", "hidden");
+        $("#stopPlayer2").hide();
         $(".notas-musicales img").css("visibility", "hidden");
-        $("#elegirResultado").css("display", "block");
+        $(".resultadoPartido").show();
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");
-        $(".acciones-partido").hide();
+//        $(".acciones-partido").hide();
     }
 
     function inicializarResultados() {
