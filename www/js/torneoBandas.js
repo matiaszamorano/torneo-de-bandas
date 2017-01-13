@@ -214,7 +214,7 @@ var torneoBandas = (function () {
         $("#escuchaDos").hide();
         $("#escucha").hide();
         $("#stopPlayer2").css("visibility", "hidden");
-        $(".jugador2 .notas-musicales img").css("visibility", "hidden");
+        $(".notas-musicales img").css("visibility", "hidden");
         $("#elegirResultado").css("display", "block");
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");

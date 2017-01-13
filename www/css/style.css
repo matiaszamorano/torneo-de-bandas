@@ -60,7 +60,6 @@ body {
     text-align: center;
     background: #FFF;
     font-family: "SilkscreenNormal", sans-serif;
-    min-height:100vh;
 }
 
 .home .cabecera img{
@@ -94,7 +93,7 @@ body {
     display: block;
 }
 .remeraJugador {
-    width: 30vw;
+    width: 36vw;
 }
 
 
@@ -155,7 +154,8 @@ body{
 
 #nextPlayer1,
 #stopPlayer2{
-    width:40px;
+    padding-top: 10px;
+    width:50px;
     top: 5vh;
     left: 5vw;
     visibility: hidden;
