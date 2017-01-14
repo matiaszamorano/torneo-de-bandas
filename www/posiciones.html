@@ -1,16 +1,44 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <title>Torneo de bandas - Descubrí música jugando</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="fonts/Silkscreen-fontfacekit/stylesheet.css" type="text/css" media="all" />
+
+        <script type="text/javascript">
+            var baseURILayout = "http://www.comunidadfusa.com";
+            var baseURIHashLayout = "http://www.comunidadfusa.com";
+            var url_fusa_home = "http://www.comunidadfusa.com";
+        </script>
+        <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="contenedor">
+            <div class="cabeceraPosiciones">
+                <img src="images/juegos/torneo-de-bandas/posiciones.jpg"/>
+            </div>
+            <div id="ranking">
+                <ul class="nav nav-tabs"  role="tablist">
+                    <li  class="active"><a href="#bandas" aria-controls="bandas" role="tab" data-toggle="tab">Bandas</a></li>
+                    <li><a href="#canciones" aria-controls="canciones" role="tab" data-toggle="tab">Canciones</a></li>
+                    <li><a href="#jugadores" aria-controls="jugadores" role="tab" data-toggle="tab">Jugadores</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="bandas">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="canciones">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="jugadores">
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
