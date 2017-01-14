@@ -1,12 +1,14 @@
 var torneoBandas = (function () {
     var audios = [];
     var partido = null;
-    var segundos = 1;
+    var segundos = 15;
     var intervalo;
     var recarga;
     var autoplay;
+    var partidoFinalizado;
 
     function getAudiosPartido(options) {
+        partidoFinalizado = false;
         var url = baseURILayout + "/servicios/juegos/torneo-de-bandas/audios";
         $.ajax({
             type: "GET",
@@ -65,8 +67,6 @@ var torneoBandas = (function () {
 
     function jugar($boton) {
         mostrarCargando();
-        timerDescendiente();
-//        $boton.hide();
         $("#btVerPosiciones").hide();
         $(".jugador1 .notas-musicales img").css("visibility", "visible");
         ejecutarPlay("player01", "play");
@@ -117,6 +117,9 @@ var torneoBandas = (function () {
             },
             swfPath: jPlayerSwfPath,
             play: function (event) {
+                if (!partidoFinalizado) {
+                    timerDescendiente();
+                }
                 $(this).jPlayer("pauseOthers");
             },
             timeupdate: function (event) {
@@ -203,13 +206,13 @@ var torneoBandas = (function () {
         $("#escuchaDos img").css("display", "block");
         $(".jugador1 .notas-musicales img").css("visibility", "hidden");
         $(".jugador2 .notas-musicales img").css("visibility", "visible");
-        timerDescendiente();
         $("#reproductorPlayer01").jPlayer("stop");
         ejecutarPlay("player02", "play");
         $("#nextPlayer1").hide();
     }
 
     function ejecutarStop() {
+        partidoFinalizado = true;
         $("#reproductorPlayer02").jPlayer("stop");
         $("#escuchaDos").hide();
         $("#escucha").hide();
@@ -218,7 +221,6 @@ var torneoBandas = (function () {
         $(".resultadoPartido").show();
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");
-//        $(".acciones-partido").hide();
     }
 
     function inicializarResultados() {
