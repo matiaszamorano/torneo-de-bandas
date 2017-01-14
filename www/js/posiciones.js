@@ -13,10 +13,15 @@ var posiciones = (function () {
     }
 
     function mostrarPosiciones(data) {
-        var templateBandas = $.templates("#templateBandas");
-        var html = templateBandas.render(data);
-        $("#bandas").html(html);
         console.log(data);
+        
+        var templateBandas = $.templates("#templateBandas");
+        var htmlBandas = templateBandas.render(data);
+        $("#bandas").html(htmlBandas);
+
+        var templateCanciones = $.templates("#templateCanciones");
+        var htmlCanciones = templateCanciones.render(data);
+        $("#canciones").html(htmlCanciones);
     }
 
     return {

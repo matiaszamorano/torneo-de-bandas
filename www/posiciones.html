@@ -59,6 +59,24 @@
             {{/for}}
         </script>
 
+        <script id="templateCanciones" type="text/html">
+            {{for canciones}}
+            <div id="puestoN">
+                <div id="puestoNumero" class="colorFusa">#{{:posicion}}</div>
+                <div id="imagenBanda" class="imgPuestos">
+                    <a href="http://www.comunidadfusa.com/bandas/{{:banda.url_fusa}}" target="_blank">
+                        <img title="{{:banda.nombre}}" src="http://www.comunidadfusa.com/{{:banda.avatar}}">                   
+                    </a>
+                </div>
+                <div id="nombreBanda">
+                    <a href="http://www.comunidadfusa.com/bandas/{{:banda.url_fusa}}" target="_blank">{{:banda.nombre}}</a>
+                </div>
+                <div id="nombreTema">{{:audio.nombreTema}}</div>
+                <div id="cantidadVotos"><img src="images/juegos/torneo-de-bandas/mini_voto.png"> {{:puntos}} puntos</div>
+            </div>
+            {{/for}}
+        </script>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/posiciones.js" type="text/javascript"></script>
         <script src="js/lib/jsrender.min.js" type="text/javascript"></script>
