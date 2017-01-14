@@ -6,6 +6,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
         <!--<link rel="stylesheet" href="css/index.css" type="text/css" >-->
         <title>Torneo de bandas - Descubrí música jugando</title>
@@ -19,6 +20,7 @@
         </script>
         <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.js"></script>
 
     </head>
     <body>
@@ -29,7 +31,13 @@
                 <a href="reglas.html"><img src="images/juegos/torneo-de-bandas/trofeo.png"/></a>
             </div>
             <div class="contenidoDelTorneo">
-                <p>Si querés sumar puntos <a href="login.html">ingresá acá</a></p>
+                <div class="datos-sesion">
+                    <p class="ingresar">Si querés sumar puntos <a href="login.html">ingresá acá</a></p>
+                    <p class="datos-usuario hidden">
+                        <span class="nombre">Player: </span>
+                        <!--<span class="puntaje">Puntos: </span>-->
+                    </p>
+                </div>
                 <div id="partido-opciones">
                     <div id="btJugar"><a href="partido.html"><img src="images/juegos/torneo-de-bandas/btJugar01.png"/></a></div>
                 </div>
@@ -41,7 +49,13 @@
         <script src="js/torneoBandas.js" type="text/javascript"></script>
         <script src="js/opcionesGanadorTorneo.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/index.js"></script>
-
+        
+        <script type="text/javascript" src="js/app/app.js"></script>
+        <script type="text/javascript" src="js/app/service/service.js"></script>
+        <script type="text/javascript" src="js/app/service/usuario/usuario.js"></script>
+        <script type="text/javascript" src="js/app/ui/ui.js"></script>
+        <script type="text/javascript" src="js/app/ui/usuario/usuario.js"></script>
+        
         <script type="text/javascript">
             $("#btReglas").live("click", function () {
                 $("#reglasDelJuego").modal({
