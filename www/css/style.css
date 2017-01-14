@@ -98,6 +98,10 @@ body {
     margin-left: 4vw;
 }
 
+.home #partido-opciones img {
+    width: 60vw;
+}
+
 #partido-opciones img {
     width: 100%;
     margin-left: auto;
