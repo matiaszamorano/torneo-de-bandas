@@ -20,6 +20,10 @@ var resultado = (function () {
         $("#nombreGanador .nombreTema").text(ganador.nombreTema);
     }
 
+    function mostrarEmpate(audios) {
+
+    }
+
     return {
         init: init
     };
