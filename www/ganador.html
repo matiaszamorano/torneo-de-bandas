@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
         <title>Torneo de bandas - Descubrí música jugando</title>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet"/>
@@ -23,6 +24,7 @@ and open the template in the editor.
         </script>
         <script type="text/javascript" src="js/sfJQueryUIPlugin/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-simplemodal/jquery.simplemodal.1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.js"></script>
 
     </head>
     <body>
@@ -47,6 +49,9 @@ and open the template in the editor.
                         <a href="" target="_blank">
                             <img src="" >
                         </a>
+                        <div id="resultadoPuntaje">
+                            <div id="puntaje2"></div>
+                        </div>
                     </div>
 
                     <div id="nombreGanador" class="nombre1ganador nombreGanador">
@@ -56,6 +61,13 @@ and open the template in the editor.
                             </a>
                         </div>
                         <div class="nombreTema"></div>
+                        <div class="datos-sesion">
+                            <p class="ingresar">Si querés sumar puntos <a href="login.html">ingresá acá</a></p>
+                            <p class="datos-usuario hidden">
+                                <span class="nombre">Player: </span> 
+                                <span class="puntaje">Puntos: </span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -66,11 +78,9 @@ and open the template in the editor.
                     <div id="btVerPosiciones">
                         <a href="posiciones.html"><img src="images/juegos/torneo-de-bandas/btPosiciones01.jpg"/></a>
                     </div>
+
                 </div>
 
-                <div id="resultadoPuntaje">
-                    <div id="puntaje2"></div>
-                </div>
             </div>
 
         </div>
@@ -80,5 +90,13 @@ and open the template in the editor.
         <script type="text/javascript">
             resultado.init();
         </script>
+
+        <script type="text/javascript" src="js/app/app.js"></script>
+        <script type="text/javascript" src="js/app/service/service.js"></script>
+        <script type="text/javascript" src="js/app/ui/ui.js"></script>
+        <!--Usuario y puntaje-->
+        <script type="text/javascript" src="js/app/service/usuario/usuario.js"></script>
+        <script type="text/javascript" src="js/app/ui/usuario/usuario.js"></script>
+
     </body>
 </html>

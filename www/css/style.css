@@ -261,6 +261,7 @@ body{
     margin:0px 20px;
     display:inline-block;
 }
+
 #resultadoPlayer02, #resultadoPlayer01{
     -moz-border-radius: 14px;
     -webkit-border-radius: 14px;
@@ -272,6 +273,7 @@ body{
     border-bottom:#cfcfcf 1px solid;
     background-color:#e1eeff;
     margin: 0 auto;
+    position: relative;
 }
 
 .contenidoGanador #resultadoPlayer01 img{
@@ -313,12 +315,13 @@ body{
     margin-left:210px;
 }
 #puntaje2{
-    position: absolute;
-    bottom: 5vh;
-    width:140px;
-    height:80px;
-    background: url("../images/juegos/torneo-de-bandas/puntaje2.png");
-    right: 5vw; 
+position: absolute;
+    bottom: 0vh;
+    width: 17vw;
+    height: 18vh;
+    background: url(../images/juegos/torneo-de-bandas/puntaje2.png);
+    background-size: contain;
+    right: 0vw; 
 }
 
 .btVerMas {
@@ -629,6 +632,10 @@ div#cargando, .cargando {
 .torneo-puntos-usuario {
     margin-left: 500px;
     text-align: left;
+}
+
+.datos-usuario {
+    margin-top: 8vh;
 }
 
 .cantidadMonedas, .nombrePlayer {
