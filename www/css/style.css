@@ -79,9 +79,22 @@ body {
     padding-bottom: 5vh;
 }
 
-#partido-opciones {
-    margin-top: 5vh;
-    width:65vw;
+.contenidoEmpate #partido-opciones {
+    position: absolute;
+    padding-left: 0;
+    bottom: 3vh;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.contenidoGanador  #partido-opciones {
+    position: absolute;
+    bottom: 3vh;
+}
+
+.contenidoGanador #partido-opciones img {
     margin-left: 4vw;
 }
 
@@ -122,8 +135,8 @@ body{
     background:url("../images/juegos/torneo-de-bandas/btReglas02.jpg");
 }
 
-#btNuevoPartido,
-#btVerPosiciones{
+#btNuevoPartido img,
+#btVerPosiciones img{
     text-decoration:none;
     cursor:pointer;
     width:50vw;
@@ -372,7 +385,7 @@ a:hover {
     -webkit-border-radius: 14px;
     border-radius: 14px;
     width:30vw;
-    height:45vh;
+    height:35vh;
     display:inline-block;
     cursor:pointer;
     border-bottom:#cfcfcf 1px solid;
