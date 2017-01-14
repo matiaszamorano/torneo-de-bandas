@@ -1,14 +1,13 @@
 var torneoBandas = (function () {
     var audios = [];
     var partido = null;
-    var segundos = 15;
+    var segundos = 1;
     var intervalo;
     var recarga;
     var autoplay;
     var partidoFinalizado;
 
     function getAudiosPartido(options) {
-        partidoFinalizado = false;
         var url = baseURILayout + "/servicios/juegos/torneo-de-bandas/audios";
         $.ajax({
             type: "GET",
@@ -236,6 +235,7 @@ var torneoBandas = (function () {
                 data: data,
                 beforeSend: mostrarCargando(),
                 success: function (data) {
+                    window.localStorage.setItem("resultado", data);
                     var audios = JSON.parse(data);
                     if (audios.length == 1) {
                         // ganó uno
@@ -244,8 +244,6 @@ var torneoBandas = (function () {
                         //empate
                         window.location = "empate.html";
                     }
-                    $(".contenidoDelTorneo").empty();
-//                    $(".contenidoDelTorneo").html(data);
                     ocultarCargando();
                 }
             });
@@ -254,6 +252,8 @@ var torneoBandas = (function () {
     }
 
     function init(ap) {
+        partidoFinalizado = false;
+        window.localStorage.setItem("resultado", "");
         autoplay = ap * 1;
         obtenerAudios();
     }
