@@ -16,9 +16,22 @@ torneoDeBandas.service.usuario = (function () {
         storage.removeItem("fusa-usuario");
     }
 
+    function estaLogueado() {
+        if (get())
+            return true;
+        else
+            return false;
+    }
+    
+    function getPuntaje() {
+        console.log("Falta puntaje del jugador");
+    }
+
     return {
         get: get,
         set: set,
-        logout: logout
+        logout: logout,
+        estaLogueado: estaLogueado,
+        getPuntaje: getPuntaje
     };
 })();
