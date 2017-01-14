@@ -13,8 +13,6 @@ var posiciones = (function () {
     }
 
     function mostrarPosiciones(data) {
-        console.log(data);
-        
         var templateBandas = $.templates("#templateBandas");
         var htmlBandas = templateBandas.render(data);
         $("#bandas").html(htmlBandas);
@@ -22,6 +20,10 @@ var posiciones = (function () {
         var templateCanciones = $.templates("#templateCanciones");
         var htmlCanciones = templateCanciones.render(data);
         $("#canciones").html(htmlCanciones);
+        
+        var templateJugadores = $.templates("#templateJugadores");
+        var htmlJugadores = templateJugadores.render(data);
+        $("#jugadores").html(htmlJugadores);
     }
 
     return {

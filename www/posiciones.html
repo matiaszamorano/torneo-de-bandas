@@ -77,6 +77,23 @@
             {{/for}}
         </script>
 
+        <script id="templateJugadores" type="text/html">
+            {{for jugadores}}
+            <div id="puestoN">
+                <div id="puestoNumero" class="colorFusa">#{{:posicion}}</div>
+                <div id="imagenBanda" class="imgPuestos">
+                    <a href="http://www.comunidadfusa.com/perfil/{{:usuario.url_perfil}}" target="_blank">
+                        <img title="{{:usuario.apodo}}" src="{{:usuario.avatar}}">
+                    </a>
+                </div>
+                <div id="nombreBanda">
+                    <a href="http://www.comunidadfusa.com/perfil/{{:usuario.url_perfil}}" target="_blank">{{:usuario.apodo}}</a>
+                </div>
+                <div id="cantidadVotos">{{:puntos}} puntos</div>
+            </div>
+            {{/for}}
+        </script>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/posiciones.js" type="text/javascript"></script>
         <script src="js/lib/jsrender.min.js" type="text/javascript"></script>
