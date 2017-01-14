@@ -21,7 +21,16 @@ var resultado = (function () {
     }
 
     function mostrarEmpate(audios) {
-
+        var local = audios[0];
+        var visitante = audios[1];
+        $("#resultadoPlayer01 a img").attr("src", urlSitio + local.avatar);
+        $("#resultadoPlayer02 a img").attr("src", urlSitio + visitante.avatar);
+        $("#nombreLocal .nombreBandaGanadora a").text(local.nombreBanda);
+        $("#nombreVisitante .nombreBandaGanadora a").text(visitante.nombreBanda);
+        $("#nombreLocal .nombreBandaGanadora a").attr("href", urlSitio + "/bandas/" + local.url_fusa);
+        $("#nombreVisitante .nombreBandaGanadora a").attr("href", urlSitio + "/bandas/" + visitante.url_fusa);
+        $("#nombreLocal .nombreTema").text(local.nombreTema);
+        $("#nombreVisitante .nombreTema").text(visitante.nombreTema);
     }
 
     return {

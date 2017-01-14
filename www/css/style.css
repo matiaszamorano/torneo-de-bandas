@@ -98,6 +98,10 @@ body {
     margin-left: 4vw;
 }
 
+.home #partido-opciones img {
+    width: 60vw;
+}
+
 #partido-opciones img {
     width: 100%;
     margin-left: auto;
@@ -270,13 +274,23 @@ body{
     margin: 0 auto;
 }
 
-#resultadoPlayer02 img, #resultadoPlayer01 img{
+.contenidoGanador #resultadoPlayer01 img{
     max-height: 95%; 
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     border:#d6d6d6 1px solid;
     margin-top:1%;
+}
+
+.contenidoEmpate #resultadoPlayer02 img, .contenidoEmpate #resultadoPlayer01 img{
+    height: 33vh; 
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border:#d6d6d6 1px solid;
+    margin-top:1%;
+    max-width: 28vw;
 }
 #puntaje1{
     position: absolute;
@@ -359,7 +373,7 @@ a:hover {
 
 /* nombre de banda + tema */
 
-#nombreGanador{
+.nombreGanador{
     padding:5px;
     height: 40vh;
     text-align:center;
@@ -393,7 +407,7 @@ a:hover {
     margin: 0 auto;
 }
 
-#jugadores.empate #nombreGanador {
+#jugadores.empate .nombreGanador {
     padding:10px 20px 0;
     height: 10vh;
     text-align:center;
