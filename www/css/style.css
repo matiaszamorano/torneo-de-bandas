@@ -114,7 +114,7 @@ body{
     padding:0px;
 }
 
-.contenedor.home {
+.contenedor.home, .contenedor.login {
     padding:15px 10px;
 }
 
