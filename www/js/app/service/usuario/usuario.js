@@ -24,7 +24,8 @@ torneoDeBandas.service.usuario = (function () {
     }
     
     function getPuntaje() {
-        console.log("Falta puntaje del jugador");
+        return torneoDeBandas.service.get(
+                torneoDeBandas.service.baseURITorneo + "/puntos/" + get().id);
     }
 
     return {

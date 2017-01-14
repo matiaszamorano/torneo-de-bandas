@@ -6,15 +6,18 @@ torneoDeBandas.ui.usuario = (function () {
         var datosUsuario = $('.datos-sesion .datos-usuario');
         var nombreUsuario = $('.datos-sesion .datos-usuario .nombre');
         var puntajeUsuario = $('.datos-sesion .datos-usuario .puntaje');
-        
-        if(torneoDeBandas.service.usuario.estaLogueado()){
+
+        if (torneoDeBandas.service.usuario.estaLogueado()) {
+
             ingresar.addClass("hidden");
-            datosUsuario.removeClass("hidden");
-            
             usuario = torneoDeBandas.service.usuario.get().apodo;
-            
             nombreUsuario.append(torneoDeBandas.service.usuario.get().apodo);
-            puntajeUsuario.append(torneoDeBandas.service.usuario.getPuntaje());
+
+            torneoDeBandas.service.usuario.getPuntaje().done(function (data) {
+                puntajeUsuario.append(data);
+                datosUsuario.removeClass("hidden");
+            });
+
         } else {
             ingresar.removeClass("hidden");
             datosUsuario.addClass("hidden");
@@ -27,6 +30,6 @@ torneoDeBandas.ui.usuario = (function () {
     };
 })();
 
-$( document ).ready(function (){
+$(document).ready(function () {
     torneoDeBandas.ui.usuario.init();
-}) 
+})

@@ -1,5 +1,6 @@
 torneoDeBandas.service = (function () {
     var BASE_URI = url_fusa_home + "/servicios";
+    var BASE_URI_TORNEO = BASE_URI + "/juegos/torneo-de-bandas";
 
     function get(uri) {
         return $.get(uri);
@@ -30,6 +31,7 @@ torneoDeBandas.service = (function () {
 
     return {
         baseURI: BASE_URI,
+        baseURITorneo: BASE_URI_TORNEO,
         get: get,
         post: post
     };
