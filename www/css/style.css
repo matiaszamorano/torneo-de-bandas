@@ -738,6 +738,16 @@ div#cargando, .cargando {
 #ranking ul li a {
     font-size: 18px;
 }
+
+.contenedorPosiciones #partido-opciones {
+    width: 100vw;
+}
+
+.contenedorPosiciones #partido-opciones img {
+    width: 70vw;
+    height: 17vh;
+    padding-bottom: 10px;
+}
 /************** FIN POSICIONES *************************/
 
 /************** REDES SOCIALES *************************/
