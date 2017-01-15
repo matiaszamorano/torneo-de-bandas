@@ -56,6 +56,11 @@ body {
     margin: 20px;
 }
 
+.home-btn {
+    position: absolute;
+    margin: 3vh;
+}
+
 .contenidoDelTorneo{
     text-align: center;
     background: #FFF;
@@ -124,6 +129,7 @@ body{
 
 .contenedor h2{
     color: orange;
+    text-align: center;
 }
 
 #btReglas {
@@ -609,6 +615,11 @@ div#cargando, .cargando {
 
 #reglasDelJuego {
     display: none;
+}
+
+.contenedor.reglas{
+    text-align: left;
+    padding: 1vw 3vw;
 }
 
 /* Overlay */
