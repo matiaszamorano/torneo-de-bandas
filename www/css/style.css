@@ -315,7 +315,7 @@ body{
     margin-left:210px;
 }
 #puntaje2{
-position: absolute;
+    position: absolute;
     bottom: 0vh;
     width: 17vw;
     height: 18vh;
@@ -739,3 +739,17 @@ div#cargando, .cargando {
     font-size: 18px;
 }
 /************** FIN POSICIONES *************************/
+
+/************** REDES SOCIALES *************************/
+#redesSociales {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+#redesSociales img {
+    height: 12vh;
+}
+
+
+/************** REDES SOCIALES *************************/
