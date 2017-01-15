@@ -9,6 +9,9 @@ var torneoBandas = (function () {
 
     function getAudiosPartido(options) {
         var url = baseURILayout + "/servicios/juegos/torneo-de-bandas/audios";
+        if (torneoDeBandas.service.usuario.estaLogueado()) {
+            url += "?id_usuario=" + torneoDeBandas.service.usuario.get().id + "&mobile=1"
+        }
         $.ajax({
             type: "GET",
             dataType: "json",
@@ -64,7 +67,7 @@ var torneoBandas = (function () {
         });
     }
 
-    function jugar($boton) {
+    function jugar() {
         mostrarCargando();
         $("#btVerPosiciones").hide();
         $(".jugador1 .notas-musicales img").css("visibility", "visible");
@@ -112,7 +115,9 @@ var torneoBandas = (function () {
                 if (autoplay) {
                     $("#btJugar").click();
                 }
-                jugar();
+                if ($(this).data("jugar") == 1) {
+                    jugar();
+                }
             },
             swfPath: jPlayerSwfPath,
             play: function (event) {
@@ -201,6 +206,7 @@ var torneoBandas = (function () {
     }
 
     function ejecutarNext() {
+        console.log("next");
         $("#escuchaUno img").hide();
         $("#escuchaDos img").css("display", "block");
         $(".jugador1 .notas-musicales img").css("visibility", "hidden");
