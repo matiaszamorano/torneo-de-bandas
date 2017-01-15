@@ -49,3 +49,4 @@ var app = {
 };
 
 app.initialize();
+window.plugins.insomnia.keepAwake();
