@@ -1,7 +1,7 @@
 var torneoBandas = (function () {
     var audios = [];
     var partido = null;
-    var segundos = 1;
+    var segundos = 15;
     var intervalo;
     var recarga;
     var autoplay;
