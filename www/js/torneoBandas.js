@@ -72,6 +72,7 @@ var torneoBandas = (function () {
         $("#btVerPosiciones").hide();
         $(".jugador1 .notas-musicales img").css("visibility", "visible");
         ejecutarPlay("player01", "play");
+        ga_storage._trackEvent('partido', 'reproduciendo', 'player', 1);
         temaActivo = 1;
         ocultarCargando();
     }
@@ -196,12 +197,14 @@ var torneoBandas = (function () {
         $("#reloadPlayer" + nroPlayer).hide();
         $("#pausePlayer" + nroPlayer).show();
         ejecutarPlay("player0" + nroPlayer, "play");
+        ga_storage._trackEvent('partido', 'recargar', 'player', nroPlayer);
     }
 
     function ejecutarPausar(nroPlayer) {
         $("#reloadPlayer" + nroPlayer).show();
         $("#pausePlayer" + nroPlayer).hide();
         $("#reproductorPlayer0" + nroPlayer).jPlayer("pause");
+        ga_storage._trackEvent('partido', 'pausar', 'player', nroPlayer);
     }
 
     function ejecutarPlay(playerId, orden) {
@@ -217,6 +220,7 @@ var torneoBandas = (function () {
         $("#reproductorPlayer01").jPlayer("stop");
         ejecutarPlay("player02", "play");
         $("#nextPlayer1").hide();
+        ga_storage._trackEvent('partido', 'reproduciendo', 'player', 2);
     }
 
     function ejecutarStop() {
@@ -229,6 +233,7 @@ var torneoBandas = (function () {
         $(".resultadoPartido").show();
         $(".btReload").show();
         $("#elegiGanador img").css("display", "block");
+        ga_storage._trackEvent('partido', 'reproduciendo', 'stop', 1);
     }
 
     function inicializarResultados() {
@@ -240,6 +245,7 @@ var torneoBandas = (function () {
         };
         $(".resultadoPartido").live("click", function () {
             data.resultado = $(this).attr("data-resultado");
+            ga_storage._trackEvent('partido', 'resultado', 'ganador', data.resultado);
             guardarResultadoPartido({
                 data: data,
                 beforeSend: mostrarCargando(),

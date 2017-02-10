@@ -26,6 +26,7 @@ login = (function () {
                 "email": email,
                 "clave": clave
             };
+            ga_storage._trackEvent('login', 'intentoLogin', 'email', email);
 
             torneoDeBandas.service.post(url, data)
                     .done(function (data) {
@@ -34,6 +35,7 @@ login = (function () {
                     })
                     .fail(function (error) {
                         $("#spin").addClass("hide");
+                        ga_storage._trackEvent('login', 'loginError', 'error', error);
                         console.log(error);
                     });
             $("#spin").removeClass("hide");
