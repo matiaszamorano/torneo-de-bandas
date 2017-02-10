@@ -132,19 +132,6 @@ body{
     text-align: center;
 }
 
-#btReglas {
-    text-decoration:none;
-    background:url("../images/juegos/torneo-de-bandas/btReglas01.jpg");
-    cursor:pointer;
-    float:right;
-    margin:155px 19px 0px 0px;
-    width:123px;
-    height:52px;
-}
-#btReglas:hover{
-    background:url("../images/juegos/torneo-de-bandas/btReglas02.jpg");
-}
-
 #btNuevoPartido img,
 #btVerPosiciones img{
     text-decoration:none;
@@ -621,17 +608,6 @@ div#cargando, .cargando {
     text-align: left;
     padding: 1vw 3vw;
 }
-
-/* Overlay */
-#simplemodal-overlay {background-color:#000; cursor:wait;}
-
-/* Container */
-#simplemodal-container {color:#000; background-color:#FFF; border:4px solid #444; padding:12px; font-size:15px; height:585px; width: 750px;}
-#simplemodal-container .simplemodal-data {padding:8px;}
-#simplemodal-container a {color:#aaa;}
-#simplemodal-container a.modalCloseImg {background:url("../images/iconos/x.png") no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
-#simplemodal-container h2 {color:#84b8d9; margin-top: 0px; }
-#simplemodal-container {text-align: left;}
 
 .barraDeUsuario {
     font-family: "SilkscreenNormal", sans-serif;
