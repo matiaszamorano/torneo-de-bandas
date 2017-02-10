@@ -68,11 +68,11 @@ var torneoBandas = (function () {
     }
 
     function jugar() {
+        ga_storage._trackEvent('partido', 'reproduciendo', 'player', 1);
         mostrarCargando();
         $("#btVerPosiciones").hide();
         $(".jugador1 .notas-musicales img").css("visibility", "visible");
         ejecutarPlay("player01", "play");
-        ga_storage._trackEvent('partido', 'reproduciendo', 'player', 1);
         temaActivo = 1;
         ocultarCargando();
     }
