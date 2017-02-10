@@ -1,7 +1,7 @@
 var torneoBandas = (function () {
     var audios = [];
     var partido = null;
-    var segundos = 15;
+    var segundos = 1;
     var intervalo;
     var recarga;
     var autoplay;
@@ -106,6 +106,8 @@ var torneoBandas = (function () {
             return false;
         });
 
+
+
         $(".torneo-bandas-audio-player").jPlayer({
             ready: function () {
                 var id = $(this).parent(".jugador").attr("data-id");
@@ -121,10 +123,12 @@ var torneoBandas = (function () {
             },
             swfPath: jPlayerSwfPath,
             play: function (event) {
+                $(this).jPlayer("pauseOthers");
+            },
+            playing: function (event) {
                 if (!partidoFinalizado) {
                     timerDescendiente();
                 }
-                $(this).jPlayer("pauseOthers");
             },
             timeupdate: function (event) {
                 if (recarga) {
@@ -206,7 +210,6 @@ var torneoBandas = (function () {
     }
 
     function ejecutarNext() {
-        console.log("next");
         $("#escuchaUno img").hide();
         $("#escuchaDos img").css("display", "block");
         $(".jugador1 .notas-musicales img").css("visibility", "hidden");
