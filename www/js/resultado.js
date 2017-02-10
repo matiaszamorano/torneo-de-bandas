@@ -18,6 +18,8 @@ var resultado = (function () {
         $("#nombreGanador .nombreBandaGanadora a").text(ganador.nombreBanda);
         $("#nombreGanador .nombreBandaGanadora a").attr("href", urlSitio + "/bandas/" + ganador.url_fusa);
         $("#nombreGanador .nombreTema").text(ganador.nombreTema);
+        ga_storage._trackEvent('resultado', 'ganador', 'banda', ganador.nombreBanda);
+        ga_storage._trackEvent('resultado', 'ganador', 'cancion', ganador.nombreTema);
     }
 
     function mostrarEmpate(audios) {
@@ -31,6 +33,11 @@ var resultado = (function () {
         $("#nombreVisitante .nombreBandaGanadora a").attr("href", urlSitio + "/bandas/" + visitante.url_fusa);
         $("#nombreLocal .nombreTema").text(local.nombreTema);
         $("#nombreVisitante .nombreTema").text(visitante.nombreTema);
+        
+        ga_storage._trackEvent('resultado', 'empate', 'banda', local.nombreBanda);
+        ga_storage._trackEvent('resultado', 'empate', 'cancion', local.nombreTema);
+        ga_storage._trackEvent('resultado', 'empate', 'banda', visitante.nombreBanda);
+        ga_storage._trackEvent('resultado', 'empate', 'cancion', visitante.nombreTema);
     }
 
     return {
