@@ -8,14 +8,22 @@
 .contenedor {
     font-family: @tipografia-bits;
     text-align: center;
+    height: 95vh;
+    overflow: auto;
+    &.align-left{
+        text-align: left;
+    }
     a {
         text-decoration: none;
         font-weight: bold;
         color: #005499;
     }
-    h2{
+    h2 {
         color: @naranja;
         text-align: center;
+    }
+    p {
+        padding: 1px;
     }
 }
 
@@ -56,4 +64,10 @@
     img {
         width: 60vw;
     }
+}
+
+.btn-home {
+    position: absolute;
+    left: 3vh;
+    top: 3vh
 }
